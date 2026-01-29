@@ -1,38 +1,51 @@
 Practice Drill 1
 
 To create the given directory structure:
-* `mkdir -p hello/{five/six/{c.txt,seven/error.log},one/{a.txt,b.txt,two/{d.txt,three/{e.txt,four/access.log}}}}`
+
+$ `mkdir -p hello/{five/six/{c.txt,seven/error.log},one/{a.txt,b.txt,two/{d.txt,three/{e.txt,four/access.log}}}}`
   // The `-p` option is used in `mkdir` to create multiple directories
   // `{}` is used to create multiple files or directories inside a directory
-* `tree hello`
+
+$ `tree hello`
   // This command is used to display the directory structure
-* `cd hello`
+
+$ `cd hello`
   // `cd` is used to enter into the directory we will work on
 
+
 1. Delete all the files having the `.log` extension
-* `find -name "*.log" -delete`
+
+$ `find -name "*.log" -delete`
   // `find` command is used to locate files
   // `-name` specifies that the search should be based on the file name
 
+
 2. Add the following content to `a.txt`
+
 "Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others"
-* `cd one`
-* `nano a.txt`
+
+$ `cd one`
+$ `nano a.txt`
   // Using the `nano` command, we can open an editor for `a.txt` and write the content
   // After completing the writing, press `Ctrl + O` to save and `Ctrl + X` to exit
 
+
 3. Delete the directory named `five`
-* `cd ..`
+
+$ `cd ..`
   // `..` is used to move back from the current directory
-* `rm -r five`
+
+$ `rm -r five`
   // `-r` is used to remove directories recursively
 
 
 4. Rename the `one` directory to `uno`
-* `mov one uno`
+
+$ `mov one uno`
   // If the `mov` command is used on a single directory, it is used to rename the directory
 
 
 5. Move `a.txt` to the `two` directory
-* `cd one`
-* `mov a.txt ./two`
+
+$ `cd one`
+$ `mov a.txt ./two`
